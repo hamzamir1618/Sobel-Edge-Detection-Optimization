@@ -1,0 +1,47 @@
+# .gitignore for CUDA Sobel Edge Detection Project
+# Akshita Akasapu et al. — M. Basim Kafeel & Hamza Ahmad Mir
+
+# Build artifacts
+sobel_serial
+sobel_naive
+sobel_tiled
+block_sweep
+validate
+*.o
+*.cubin
+*.ptx
+*.fatbin
+
+# Output files
+output/
+# Ignore contents of results directory but keep the directory itself and example file
+results/*
+!results/example_benchmark.csv
+
+# Test images (keep images/ dir but ignore generated test images)
+images/*.pgm
+images/*.tiff
+images/*.tif
+!images/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# CUDA profiler output
+*.nvvp
+*.nsys-rep
+*.qdrep
+*.sqlite
+
+# Benchmark logs
+*.log
+*.csv
